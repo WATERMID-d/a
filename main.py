@@ -77,7 +77,7 @@ def captcha_bypass(token, url, key, captcha_rqdata):
     with open("config.json") as dsc_ez:
         config = json.load(dsc_ez)
         startedSolving = time.time()
-        capmonster = HCaptchaTask(config['a4bb58d4b6e4b6867514454a1fcd66d0'])
+        capmonster = HCaptchaTask(config['90d33c787fa6d7fa9d557bad3ac748b1'])
         task_id = capmonster.create_task(url, key, is_invisible=True, custom_data=captcha_rqdata)
         result = capmonster.join_task_result(task_id)
         response = result.get("gRecaptchaResponse")
