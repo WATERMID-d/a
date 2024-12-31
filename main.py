@@ -77,7 +77,7 @@ def captcha_bypass(token, url, key, captcha_rqdata):
     with open("config.json") as dsc_ez:
         config = json.load(dsc_ez)
         startedSolving = time.time()
-        capmonster = HCaptchaTask(config['capmonster_key'])
+        capmonster = HCaptchaTask(config['a4bb58d4b6e4b6867514454a1fcd66d0'])
         task_id = capmonster.create_task(url, key, is_invisible=True, custom_data=captcha_rqdata)
         result = capmonster.join_task_result(task_id)
         response = result.get("gRecaptchaResponse")
@@ -96,7 +96,7 @@ def join(token):
     global joined, solved, errors, rules
     with open("config.json") as jn:
         check = json.load(jn)
-        invite_code = check.get('invite')
+        invite_code = check.get('EfphABYT')
     proxy = choice(open("proxies.txt", "r").readlines()).strip() if len(open("proxies.txt", "r").readlines()) != 0 else None
 
     session = Session(client_identifier="chrome_114", random_tls_extension_order=True)
@@ -214,8 +214,8 @@ def main():
 
 main()
 
-with open("config.json") as discord_gay:
-    que_onda_eres_bobo = json.load(discord_gay)
+with open("config (1).json") as hm:
+    que_onda_eres_bobo = json.load(hm)
     check = que_onda_eres_bobo.get('change_nickname')
     if check == "y" or check == "yes":
         def get_guild_id_from_invite(invite_link):
@@ -227,10 +227,10 @@ with open("config.json") as discord_gay:
             else:
                 return None
 
-        with open("config.json") as penis:
-            data = json.load(penis)
+        with open("config (1).json") as hm:
+            data = json.load(hm)
             code = data.get('invite')
-        invite_link = f'https://discord.gg/{code}'
+        invite_link = f'https://discord.gg/EfphABYT'
         guild_id = get_guild_id_from_invite(invite_link)
 
         def nicker():
@@ -263,8 +263,8 @@ with open("config.json") as discord_gay:
                     print(f"{reset}[ {cyan}{time_rn}{reset} ] {gray}({red}-{gray}) {pretty}Error Changing Nickname {gray}| {cyan}{token[:50]}*****")
             tokens = open("tokens.txt", "r").read().splitlines()
             server = get_guild_id_from_invite(invite_link)
-            with open("config.json") as pussy:
-                omg = json.load(pussy)
+            with open("config.json") as hm:
+                omg = json.load(hm)
                 nick = omg.get('nickname')
             for token in tokens:
                 threading.Thread(target=nicker2, args=(server, nick, token)).start()
